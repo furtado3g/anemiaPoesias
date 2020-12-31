@@ -54,8 +54,8 @@ const Button = styled.button<buttonProps>`
   font-size: 1rem;
   padding: 0.5rem 1rem;
   width: 80%;
-  color: ${(props) => (props.to == "login" ? "ghostwhite" : "black")};
-  background: ${(props) => (props.to == "login" ? "#555555" : "ghostwhite")};
+  color: ghostwhite;
+  background: ${(props) => (props.to == "login" ? "#555555" : "#b2102f")};
   &:focus,
   &:hover,
   &:visited,

@@ -47,6 +47,10 @@ const Login = () => {
             <i className="fab fa-google"></i>
             Entrar com Google
           </Button>
+          <Button to="back" onClick={history.go(-1)}>
+            <i className="fas fa-chevron-circle-left"></i>
+            Voltar
+          </Button>
           <Divider />
         </Container>
       </Page>
