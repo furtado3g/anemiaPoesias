@@ -45,11 +45,15 @@ const Login = () => {
           </FormGroup>
           <Button to="login">
             <i className="fas fa-sign-in-alt"></i>
-            Entrar
+            Entrar com Email
           </Button>
-          <Button to="login">
+          <Button to="login-google">
             <i className="fab fa-google"></i>
             Entrar com Google
+          </Button>
+          <Button to="login-facebook">
+            <i className="fab fa-facebook"></i>
+            Entrar com Facebook
           </Button>
           <Button to="back" onClick={handleWithBackButton}>
             <i className="fas fa-chevron-circle-left"></i>

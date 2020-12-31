@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "next": "^10.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

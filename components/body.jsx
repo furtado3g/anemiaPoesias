@@ -1,5 +1,5 @@
 import 'semantic-ui-css/semantic.min.css'
-
+import '@fortawesome/fontawesome-free/css/all.css'
 const Body = (props) =>{
     return (
       <>

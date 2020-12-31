@@ -4,6 +4,18 @@ interface buttonProps {
   to: string;
 }
 
+const buttonTheme = (props:buttonProps) =>{
+  if(props.to == 'back'){
+    return "#b2102f"
+  }else if(props.to == 'login'){
+    return "#555555"
+  }else if(props.to == 'login-facebook'){
+    return "#4267B2"
+  }else if(props.to == 'login-google'){
+    return "linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);"
+  }
+}
+
 const Page = styled.div`
   height: 100vh;
   width: 100vw;
@@ -55,7 +67,8 @@ const Button = styled.button<buttonProps>`
   padding: 0.5rem 1rem;
   width: 80%;
   color: ghostwhite;
-  background: ${(props) => (props.to == "login" ? "#555555" : "#b2102f")};
+  background: ${(props) => (buttonTheme(props))};
+  font-weight: 600;
   &:focus,
   &:hover,
   &:visited,
