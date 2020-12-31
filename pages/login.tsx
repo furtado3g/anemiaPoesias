@@ -17,6 +17,10 @@ const Login = () => {
       setEyeIcon('far fa-eye')
     }
   }
+
+  const handleWithBackButton = () =>{
+    history.go(-1)
+  }
   
   useEffect(()=>{
     window.scrollTo(0,1);
@@ -47,7 +51,7 @@ const Login = () => {
             <i className="fab fa-google"></i>
             Entrar com Google
           </Button>
-          <Button to="back" onClick={history.go(-1)}>
+          <Button to="back" onClick={handleWithBackButton}>
             <i className="fas fa-chevron-circle-left"></i>
             Voltar
           </Button>
