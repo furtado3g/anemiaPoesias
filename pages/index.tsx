@@ -24,7 +24,7 @@ import {
     ComentaryLabel,
     ComentaryTextArea,
     ComentarySubmitButton
-} from "../components/style";
+} from "../components/home/style";
 
 export default function Home() {
 
