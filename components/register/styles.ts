@@ -109,6 +109,12 @@ const BackButton = styled(Button)`
   }
 `;
 
+const Warning = styled.p`
+  color: #b2102f;
+  margin-top: 8px;
+  font-size: 0.8rem;
+`
+
 export {
   Container,
   Page,
@@ -119,5 +125,6 @@ export {
   Divider,
   PasswordSpy,
   Title,
-  BackButton
+  BackButton,
+  Warning,
 };
