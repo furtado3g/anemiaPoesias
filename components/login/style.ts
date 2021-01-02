@@ -91,6 +91,18 @@ const PasswordSpy = styled.i`
   margin-right: 0.5rem;
   margin-bottom: 10px;
 `;
+
+const BackButton = styled(Button)`
+  margin-left: -16rem;
+  text-align: left;
+  border-radius: 10px 2px 2px 10px;
+  max-width: 8em;
+  @media (max-width: 700px){
+    border-radius: 2px;
+    
+  }
+`;
+
 export {
   Container,
   Page,
@@ -100,4 +112,5 @@ export {
   Button,
   Divider,
   PasswordSpy,
+  BackButton,
 };

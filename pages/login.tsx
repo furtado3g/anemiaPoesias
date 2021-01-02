@@ -9,6 +9,7 @@ import {
   Button,
   Divider,
   PasswordSpy,
+  BackButton
 } from "../components/login/style";
 import { Icon } from "semantic-ui-react";
 const Login = () => {
@@ -39,19 +40,13 @@ const Login = () => {
     <Body>
       <Page>
         <Container>
-          <Button
+          <BackButton
             to="back"
             onClick={handleWithBackButton}
-            style={{
-              "margin-left": "-16rem",
-              "text-align": "left",
-              "border-radius": "10px 2px 2px 10px",
-              "max-width": "8em",
-            }}
           >
             <i className="fas fa-chevron-circle-left"></i>
             Voltar
-          </Button>
+          </BackButton>
           <Logo src="/assets/img/logo.png" />
           <FormGroup>
             <label htmlFor="">Login</label>
