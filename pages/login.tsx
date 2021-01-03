@@ -11,7 +11,6 @@ import {
   PasswordSpy,
   BackButton
 } from "../components/login/style";
-import { Icon } from "semantic-ui-react";
 const Login = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");

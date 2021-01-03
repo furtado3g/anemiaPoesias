@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Body } from "../components/body";
+import {DateTime} from 'luxon'
 import {
   Container,
   Page,
@@ -13,12 +14,14 @@ import {
 } from "../components/register/styles";
 
 function register() {
+  /* Base Url */
+  const baseUrl = 'http://localhost:3333'
   /* form states */
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [date, setDate] = useState(new Date());
+  const [birthday, setDate] = useState(DateTime.local());
 
   /* password visibility */
   const [visible, setVisible] = useState("password");
@@ -47,6 +50,27 @@ function register() {
       setWarning("");
     }
   };
+
+  const handleWithSubmit = async () => {
+    const data = {
+      url :`${baseUrl}/users`,
+      options : {
+        method : "POST",
+        headers : {
+          'Content-Type': 'application/json'
+        },
+        body : JSON.stringify({
+          name,
+          username,
+          email,
+          password,
+          birthday
+        })
+      }
+    }
+    await fetch(data.url,data.options)
+    .then(response =>alert(response))
+  }
 
   return (
     <Body>
@@ -103,11 +127,11 @@ function register() {
             <Input
               id="birthday"
               type="Date"
-              value={date.toDateString()}
-              onChange={(e) => setDate(e.target.value)}
+              value={birthday.toFormat('yyyy-MM-dd')}
+              onChange={(e) => setDate(DateTime.fromFormat(e.target.value,'yyyy-MM-dd'))}
             />
           </FormGroup>
-          <Button to="register">
+          <Button to="register" onClick={handleWithSubmit}>
             <i className="far fa-check-circle"></i>
             Registrar
           </Button>
